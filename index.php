@@ -17,24 +17,39 @@ include 'includes/newfile.inc.php'
 <body>
     <?php
 
-    $userone = new User;
-    $userTwo = new User;
+    // $userone = new User('jean', 'miessanhenri@gmail.com');
+    // $userTwo = new User('john', 'daniel@gmail.com');
 
-    echo $userone->username . "<br>";
-    echo $userone->email . "<br>";
-    echo $userone->addfriend();
+    // echo $userone->username . "<br>";
+    // echo $userone->email . "<br>";
+    // echo $userone->addfriend() . "<br>";
 
-    echo $useroneTwo->username = "Miesan" . "<br>";
-    echo $useroneTwo->email = "Henry" . "<br>";
+    // // echo $useroneTwo->username = "Miesan" . "<br>";
+    // // echo $useroneTwo->email = "Henry" . "<br>";
 
-    echo $useroneTwo->username . "<br>";
-    echo $useroneTwo->email . "<br>";
+    // echo $userTwo->username . "<br>";
+    // echo $userTwo->email . "<br>";
+    // echo $userTwo->addfriend();
     // echo $useroneTwo->addfriend();
 
 
 
     // print_r(get_class_vars('User')) . '<br>';
     // print_r(get_class_methods('User'));
+
+    // $person1 = new Person("Daniel", "blue", "28");
+    // $person2 = new Person("jean", "chocolate", "23");
+    // // echo $person1->name . "<br>";
+    // // echo $person1->eyecolor . "<br>";
+    // // $person1->setName('jfeam');
+    // // echo $person1->name . "<br>";
+    // echo $person1->getName() . "<br>";
+    // echo $person2->getName() . "<br>";
+
+    $object = new newClass();
+    echo $object->getproperty();
+
+
 
 
 
