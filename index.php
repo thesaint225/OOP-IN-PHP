@@ -17,37 +17,50 @@ include 'includes/newfile.inc.php'
 <body>
     <?php
 
-    // $userone = new User('jean', 'miessanhenri@gmail.com');
-    // $userTwo = new User('john', 'daniel@gmail.com');
+    $person = new User('mario', 'miessanhenri@gmail.com');
+    $person2 = new User('hennri', 'johnemmanuel@gmail.com');
+    $person3 = new Admin('miesssan', 'miessanhenri@gmail', 5);
+    echo $person3->username . "<br>";
+    echo $person3->getEmail() . "<br>";
 
-    // echo $userone->username . "<br>";
-    // echo $userone->email . "<br>";
-    // echo $userone->addfriend() . "<br>";
+    echo $person3->levels . "<br>";
 
-    // // echo $useroneTwo->username = "Miesan" . "<br>";
-    // // echo $useroneTwo->email = "Henry" . "<br>";
+    echo $person->role . "<br>";
+    echo $person3->role . "<br>";
+    echo $person->message() . "<br>";
+    echo $person3->message() . "<br>";
 
-    // echo $userTwo->username . "<br>";
-    // echo $userTwo->email . "<br>";
-    // echo $userTwo->addfriend();
-    // echo $useroneTwo->addfriend();
+    $person4 = clone $person;
+    echo $persone4->username;
 
 
 
-    // print_r(get_class_vars('User')) . '<br>';
-    // print_r(get_class_methods('User'));
 
-    // $person1 = new Person("Daniel", "blue", "28");
-    // $person2 = new Person("jean", "chocolate", "23");
-    // // echo $person1->name . "<br>";
-    // // echo $person1->eyecolor . "<br>";
-    // // $person1->setName('jfeam');
-    // // echo $person1->name . "<br>";
-    // echo $person1->getName() . "<br>";
-    // echo $person2->getName() . "<br>";
+    $person2->setEmail('henrymiessan@gmail.com');
 
-    $object = new newClass();
-    echo $object->getproperty();
+    echo $person2->getEmail() . '<br>';
+
+    echo $person->getEmail();
+
+    // $pet01 = new Person();
+    // echo $pet01->first;
+
+
+    // $person = new User('miessan', 'blue', 28);
+    // echo $person->getname() . "<br>";
+
+    // $person = new User('miessan', 'blue', 29);
+    // echo $person->getDA() . "<br>";
+
+    // User::setage(18);
+    // echo User::$drinkingAge;
+
+
+    // print_r(weather::$TempCondition);
+    // echo weather::celsiusToFarenheit(20) . '<br>';
+    // echo weather::determinTempCondition(54);
+
+
 
 
 
