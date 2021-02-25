@@ -1,6 +1,15 @@
 <?php
+spl_autoload_register('myAutoLoader');
 
-include 'includes/newfile.inc.php'
+
+function myAutoLoader($className)
+{
+    $path = "classes/";
+    $extension = ".class.php";
+    $fullpath = $path . $className . $extension;
+
+    include_once $fullpath;
+}
 
 
 ?>
@@ -16,31 +25,36 @@ include 'includes/newfile.inc.php'
 
 <body>
     <?php
+    $person = new Person('miessan', 28);
+    echo $person->getname() . '<br>';
+    $house  = new House('Accra', 'teshie');
+    echo $house->getAddress();
 
-    $person = new User('mario', 'miessanhenri@gmail.com');
-    $person2 = new User('hennri', 'johnemmanuel@gmail.com');
-    $person3 = new Admin('miesssan', 'miessanhenri@gmail', 5);
-    echo $person3->username . "<br>";
-    echo $person3->getEmail() . "<br>";
+    // $person = new User('mario', 'miessanhenri@gmail.com');
 
-    echo $person3->levels . "<br>";
+    // $person2 = new User('hennri', 'johnemmanuel@gmail.com');
+    // $person3 = new Admin('miesssan', 'miessanhenri@gmail', 5);
+    // echo $person3->username . "<br>";
+    // echo $person3->getEmail() . "<br>";
 
-    echo $person->role . "<br>";
-    echo $person3->role . "<br>";
-    echo $person->message() . "<br>";
-    echo $person3->message() . "<br>";
+    // echo $person3->levels . "<br>";
 
-    $person4 = clone $person;
-    echo $persone4->username;
+    // echo $person->role . "<br>";
+    // echo $person3->role . "<br>";
+    // echo $person->message() . "<br>";
+    // echo $person3->message() . "<br>";
+
+    // $person4 = clone $person;
+    // echo $persone4->username;
 
 
 
 
-    $person2->setEmail('henrymiessan@gmail.com');
+    // $person2->setEmail('henrymiessan@gmail.com');
 
-    echo $person2->getEmail() . '<br>';
+    // echo $person2->getEmail() . '<br>';
 
-    echo $person->getEmail();
+    // echo $person->getEmail();
 
     // $pet01 = new Person();
     // echo $pet01->first;
